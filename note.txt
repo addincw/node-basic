@@ -1,0 +1,79 @@
+node js
+-----------------------------------------------------
+1. bukan bahasa pemrograman, hanya sebagai runtime 
+   pada server, agar js bisa di jalankan di server.
+   dan bisa di akses melalui terminal
+
+   browser (request) -> nodejs (response) -> browser
+
+2. nodejs bisa diinstall lgsg dari websitenya. atau 
+   bisa menggunakan nvm (node version management)
+   seperti aplikasi ammps, bisa install banya versi
+   node, dan bebas pilih mau menggunakan versi yang 
+   mana. 
+
+3. cara menjalan nodejs, dengan perintah node di
+   teriminal, atau bisa node {nama file}, default akan
+   mencari file index.js pada root folder --> node {.}
+
+4. nodejs memiliki beberapa global object yang bisa di
+   akses di file manapun pada project (backend/frontend)
+   cth: console, global (bisa tambah variabel sendiri), 
+   process
+
+5. nodejs dijalankan secara asyncrounous, setiap event di
+   jalankan pada thread yang berbeda, dan tidak menunggu
+   event lain agar berjalan (non-blocking)
+
+   event pada nodejs di handle dengan menggunakan callback
+   function cth: process.on('event', callback())
+
+6. module dengan prefix sync == blocking
+
+7. npm adalah package manager untuk nodejs, seperti composer
+   di php. bisa dilakukan dengan perintah npm init. menghasil-
+   kan file package.json. di file package.json juga berguna 
+   untuk setting perintah node server kita. cth npm start dll.
+
+8. express adalah framework nodejs sederhana untuk mempermudah
+   penulisan code js pada node. bisa diinstall melalui npm.
+
+9. project web nodejs dapat di upload di google cloud app engine
+   kenapa disana, karena tidak perlu instalasi server, sudah full
+   support untuk nodejs project. cukup tambah file .yml, dan
+   setting command start: node . di package.json, upload ke gcloud
+
+   layanan serupa, netlify, amazon, heroku
+
+   require(...) --> cara untuk load file lain di nodejs. common.js
+
+10. dalam process developmen, nodemon (npm i -D nodemon) berguna 
+    untuk merestart server server secara otomatis, setiap kali ada 
+    perubahan pada server.
+
+    setelah nodemon terinstall, perlu untuk setting command di
+    package.json agar nodemon bisa diakses melalui terminal 
+    script_name: (nodemon {nama_file}) --> npm run {script_name}
+
+heroku
+------------------------------------------------------------------
+0. di package.json buat script start (node index), karena default
+   server akan mencari file index
+1. daftar heroku
+2. install heroku cli
+3. on terminal heroku login
+4. on terminal ignoring node_module before git init
+5. on terminal git commit
+6. on terminal heroku create
+7. on heroku dasboard, choose domain -> deploy, copy command git:remote
+   run on terminal
+8. on terminal git push heroku master
+9. done (heroku open, direct url in browser)
+
+source:
+- Node.js Ultimate Beginner’s Guide in 7 Easy Steps 
+  https://www.youtube.com/watch?v=ENrzD9HAZK4
+
+- Node.js Crash Course
+  https://www.youtube.com/watch?v=fBNz5xF-Kx4&list=WL&index=10
+
